@@ -1,0 +1,55 @@
+[window]
+opacity = 0.82
+padding = { x = 12, y = 10 }
+dynamic_padding = true
+startup_mode = "Windowed"
+
+[font]
+size = 11.0
+
+[font.normal]
+family = "Monospace"
+style = "Regular"
+
+[colors.primary]
+background = "#100708"
+foreground = "#F5D6D0"
+
+[colors.cursor]
+text = "#100708"
+cursor = "#FF786B"
+
+[colors.selection]
+text = "#FFF0E9"
+background = "#69252D"
+
+[colors.normal]
+black = "#100708"
+red = "#FF5147"
+green = "#D36B54"
+yellow = "#E8A16A"
+blue = "#A83D4B"
+magenta = "#C46B78"
+cyan = "#E69B86"
+white = "#F5D6D0"
+
+[colors.bright]
+black = "#604044"
+red = "#FF786B"
+green = "#F09A7B"
+yellow = "#FFD0A0"
+blue = "#D65D68"
+magenta = "#E995A4"
+cyan = "#FFC0A8"
+white = "#FFF0E9"
+
+[terminal]
+osc52 = "CopyPaste"
+
+[bell]
+duration = 0
+
+[mouse]
+bindings = [
+    { mouse = "Right", action = "Paste" }
+]

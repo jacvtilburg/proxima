@@ -1,0 +1,37 @@
+
+/* Proxima - Nemo */
+.nemo-window,
+.nemo-window notebook,
+.nemo-window .view,
+.nemo-window treeview {
+    background-color: rgba(42, 11, 18, 0.65);
+    color: #FFF0E9;
+}
+
+.nemo-window .sidebar,
+.nemo-window .sidebar .view {
+    background-color: rgba(32, 8, 14, 0.75);
+    color: #FFF0E9;
+}
+
+.nemo-window .view:selected,
+.nemo-window treeview:selected {
+    background-color: rgba(105, 37, 45, 0.90);
+    color: #FFF0E9;
+}
+
+.nemo-window entry {
+    background-color: rgba(32, 8, 14, 0.85);
+    color: #FFF0E9;
+    border-color: #69252D;
+}
+
+.nemo-window button {
+    background-color: rgba(58, 21, 29, 0.85);
+    color: #FFF0E9;
+}
+
+.nemo-window button:hover {
+    background-color: #69252D;
+}
+
