@@ -21,6 +21,17 @@ sudo apt install -y \
     pavucontrol pulseaudio-utils \
     libnotify-bin
 
+# Install Tailscale
+echo "=== Installing Tailscale ==="
+
+if ! command -v tailscale >/dev/null 2>&1; then
+    curl -fsSL https://tailscale.com/install.sh | sh
+else
+    echo "Tailscale is already installed."
+fi
+
+sudo systemctl enable --now tailscaled
+
 # 2. Clone or update the repository
 echo "=== Downloading dotfiles ==="
 if [[ -d "$REPO/.git" ]]; then
