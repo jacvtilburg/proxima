@@ -131,11 +131,13 @@ fi
 
 # Set wallpaper AFTER importing Cinnamon settings
 if command -v gsettings >/dev/null 2>&1; then
-    gsettings set org.cinnamon.desktop.background picture-uri \
-        "file://$WALLPAPER"
-    gsettings set org.cinnamon.desktop.background picture-uri-dark \
-        "file://$WALLPAPER"
-    gsettings set org.cinnamon.desktop.background picture-options 'zoom'
+    if gsettings list-keys org.cinnamon.desktop.background | grep -qx picture-uri; then
+        gsettings set org.cinnamon.desktop.background picture-uri "file://$WALLPAPER"
+    fi
+
+    if gsettings list-keys org.cinnamon.desktop.background | grep -qx picture-options; then
+        gsettings set org.cinnamon.desktop.background picture-options 'zoom'
+    fi
 fi
 
 echo
